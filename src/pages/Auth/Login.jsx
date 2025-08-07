@@ -50,7 +50,7 @@ const Login = () => {
           <h1 className="text-3xl md:text-4xl font-bold">Welcome Back 👋</h1>
           <p className="text-base md:text-lg leading-relaxed">
             Log in to manage your slots, bookings, and business settings with{" "}
-            <strong>Bookly</strong> — your simple, elegant scheduling companion.
+            <strong>Bookly</strong> your simple, elegant scheduling companion.
           </p>
           <p className="text-xs md:text-sm text-[#97BEFF]">
             Built by Binary — your future-ready tech partner.
