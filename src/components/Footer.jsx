@@ -39,7 +39,7 @@ const Footer = () => {
             <li><a href="/about" className="hover:text-[#50D6FE]">About</a></li>
             <li><a href="/terms" className="hover:text-[#50D6FE]">Terms</a></li>
             <li><a href="/privacy" className="hover:text-[#50D6FE]">Privacy</a></li>
-            <li><a href="/contact" className="hover:text-[#50D6FE]">Contact</a></li>
+            {/* <li><a href="/contact" className="hover:text-[#50D6FE]">Contact</a></li> */}
           </ul>
         </div>
 
@@ -50,7 +50,7 @@ const Footer = () => {
             href="mailto:hello@binary.africa"
             className="text-[#50D6FE] hover:underline mt-1 inline-block"
           >
-            hello@binary.africa
+            hi@hqbinary.com
           </a>
         </div>
       </div>

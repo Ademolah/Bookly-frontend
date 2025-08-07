@@ -1,40 +1,4 @@
-// // src/pages/Dashboard.jsx
-// import React, { useEffect, useState } from "react";
-// import { useNavigate } from "react-router-dom";
-// import DashboardLayout from "../components/DasboardLayout";
 
-// const Dashboard = () => {
-//   const [user, setUser] = useState(null);
-//   const navigate = useNavigate();
-
-//   useEffect(() => {
-//     const token = localStorage.getItem("token");
-//     const userInfo = localStorage.getItem("user");
-
-//     if (!token || !userInfo) {
-//       navigate("/login");
-//     } else {
-//       setUser(JSON.parse(userInfo));
-//     }
-//   }, [navigate]);
-
-//   if (!user) return null;
-
-//   return (
-//     <DashboardLayout>
-//       <div className="bg-white p-8 rounded-xl shadow-md max-w-3xl mx-auto">
-//         <h1 className="text-3xl font-bold text-[#00477B] mb-2">
-//           Welcome back, {user.fullName.split(" ")[0]} 👋
-//         </h1>
-//         <p className="text-gray-600 text-lg">
-//           This is your Bookly dashboard. From here, you can manage your booking slots, view upcoming appointments, and personalize your settings.
-//         </p>
-//       </div>
-//     </DashboardLayout>
-//   );
-// };
-
-// export default Dashboard;
 
 // src/pages/Dashboard.jsx
 import React, { useEffect, useState } from "react";
@@ -70,17 +34,24 @@ const Dashboard = () => {
                 Welcome back, {firstName} 👋
               </h1>
               <p className="text-gray-600 mt-4 text-lg">
-                Your Bookly dashboard is where everything begins — manage slots, track appointments, and fine-tune your business settings with ease.
+                Your Bookly dashboard is where everything begins, manage slots, track appointments, and fine-tune your business settings with ease.
               </p>
             </div>
 
-            <div className="flex-1 hidden md:block">
+            {/* <div className="flex-1 hidden md:block">
               <img
                 src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80"
                 alt="Dashboard Visual"
                 className="w-full max-w-sm mx-auto rounded-xl"
                 />
-            </div>
+            </div> */}
+            <div className="flex-1">
+  <img
+    src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80"
+    alt="Dashboard Visual"
+    className="w-full max-w-sm mx-auto rounded-xl"
+  />
+</div>
           </div>
 
           {/* Future: Quick Stats or Widgets */}
