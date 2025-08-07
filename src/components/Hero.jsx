@@ -56,7 +56,7 @@ const Hero = () => {
             Get More Done.
           </h1>
           <p className="text-gray-600 text-lg">
-            Bookly helps you manage appointments effortlessly — for your business, your clients, and your time.
+            Bookly helps you manage appointments effortlessly for your business, your clients, and your time.
           </p>
           <div className="space-x-4 mt-4">
             <a href="/register">

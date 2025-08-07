@@ -11,6 +11,11 @@ import Bookings from "./pages/Bookings.jsx";
 import PublicBooking from "./pages/PublicBooking.jsx";
 import Settings from "./pages/Settings.jsx";
 import { ToastContainer } from "react-toastify";
+import About from "./pages/About.jsx";
+import Privacy from "./pages/Privacy.jsx";
+import Terms from "./pages/Terms.jsx";
+import Footer from "./components/Footer.jsx";
+import Navbar from "./components/Navbar.jsx";
 
 const App = () => {
   return (
@@ -20,6 +25,9 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/privacy" element={<Privacy />} />
         <Route path="/register" element={<Register />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/dashboard/slots" element={<Slots />} />
@@ -29,6 +37,7 @@ const App = () => {
         {/* More routes like /dashboard coming soon */}
       </Routes>
     </Router>
+    
   );
 };
 
