@@ -38,20 +38,14 @@ const Dashboard = () => {
               </p>
             </div>
 
-            {/* <div className="flex-1 hidden md:block">
+            
+            <div className="flex-1">
               <img
                 src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80"
                 alt="Dashboard Visual"
                 className="w-full max-w-sm mx-auto rounded-xl"
-                />
-            </div> */}
-            <div className="flex-1">
-  <img
-    src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80"
-    alt="Dashboard Visual"
-    className="w-full max-w-sm mx-auto rounded-xl"
-  />
-</div>
+              />
+          </div>
           </div>
 
           {/* Future: Quick Stats or Widgets */}

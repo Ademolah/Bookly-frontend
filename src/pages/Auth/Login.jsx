@@ -30,19 +30,34 @@ const Login = () => {
   };
 
   return (
+    // <div className="min-h-screen flex flex-col md:flex-row">
+    //   {/* Left Panel - Info */}
+    //   <div className="hidden md:flex md:w-1/2 bg-gradient-to-br from-[#00477B] to-[#50D6FE] items-center justify-center text-white p-12">
+    //     <div className="max-w-md text-center space-y-6">
+    //       <h1 className="text-4xl font-bold">Welcome Back 👋</h1>
+    //       <p className="text-lg leading-relaxed">
+    //         Log in to manage your slots, bookings, and business settings with <strong>Bookly</strong> your simple, elegant scheduling companion.
+    //       </p>
+    //       <p className="text-sm text-[#97BEFF]">
+    //         Built by Binary — your future-ready tech partner.
+    //       </p>
+    //     </div>
+    //   </div>
     <div className="min-h-screen flex flex-col md:flex-row">
       {/* Left Panel - Info */}
-      <div className="hidden md:flex md:w-1/2 bg-gradient-to-br from-[#00477B] to-[#50D6FE] items-center justify-center text-white p-12">
+      <div className="flex w-full md:w-1/2 bg-gradient-to-br from-[#00477B] to-[#50D6FE] items-center justify-center text-white p-8 md:p-12">
         <div className="max-w-md text-center space-y-6">
-          <h1 className="text-4xl font-bold">Welcome Back 👋</h1>
-          <p className="text-lg leading-relaxed">
-            Log in to manage your slots, bookings, and business settings with <strong>Bookly</strong> — your simple, elegant scheduling companion.
+          <h1 className="text-3xl md:text-4xl font-bold">Welcome Back 👋</h1>
+          <p className="text-base md:text-lg leading-relaxed">
+            Log in to manage your slots, bookings, and business settings with{" "}
+            <strong>Bookly</strong> — your simple, elegant scheduling companion.
           </p>
-          <p className="text-sm text-[#97BEFF]">
+          <p className="text-xs md:text-sm text-[#97BEFF]">
             Built by Binary — your future-ready tech partner.
           </p>
         </div>
       </div>
+
 
       {/* Right Panel - Login Form */}
       <div className="w-full md:w-1/2 flex items-center justify-center p-8 bg-[#F0F9FF]">

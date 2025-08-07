@@ -32,14 +32,14 @@ const Register = () => {
   return (
     <div className="min-h-screen flex flex-col md:flex-row">
       {/* Left Panel - Info */}
-      <div className="hidden md:flex md:w-1/2 bg-gradient-to-br from-[#00477B] to-[#50D6FE] items-center justify-center text-white p-12">
+      <div className="flex w-full md:w-1/2 bg-gradient-to-br from-[#00477B] to-[#50D6FE] items-center justify-center text-white p-12">
         <div className="max-w-md text-center space-y-6">
           <h1 className="text-4xl font-bold">Join Bookly 🚀</h1>
           <p className="text-lg leading-relaxed">
             Register your free account and take control of your schedule. Manage slots, receive bookings, and grow your business effortlessly.
           </p>
           <p className="text-sm text-[#97BEFF]">
-            Powered by Binary — Building beautiful products.
+            Powered by Binary, Building beautiful products.
           </p>
         </div>
       </div>
