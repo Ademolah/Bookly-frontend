@@ -12,7 +12,7 @@ const Slots = () => {
 
   const fetchSlots = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/slots", {
+      const res = await axios.get("https://bookly-backend-5qfw.onrender.com/api/slots", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setSlots(res.data);
@@ -29,7 +29,7 @@ const Slots = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      await axios.post("http://localhost:5000/api/slots", form, {
+      await axios.post("https://bookly-backend-5qfw.onrender.com/api/slots", form, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setForm({ date: "", time: "" });
@@ -42,7 +42,7 @@ const Slots = () => {
 
   const deleteSlot = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/slots/${id}`, {
+      await axios.delete(`https://bookly-backend-5qfw.onrender.com/api/slots/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchSlots();

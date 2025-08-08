@@ -12,7 +12,7 @@ const Bookings = () => {
 
   const fetchBookings = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/bookings", {
+      const res = await axios.get("https://bookly-backend-5qfw.onrender.com/api/bookings", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setBookings(res.data);
@@ -23,7 +23,7 @@ const Bookings = () => {
 
   const cancelBooking = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/bookings/${id}`, {
+      await axios.delete(`https://bookly-backend-5qfw.onrender.com/api/bookings/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchBookings();

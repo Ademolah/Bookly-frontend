@@ -21,7 +21,7 @@ const PublicBooking = () => {
   useEffect(() => {
     const fetchSlots = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/public/slots/${slug}`);
+        const res = await axios.get(`https://bookly-backend-5qfw.onrender.com/api/public/slots/${slug}`);
         setSlots(res.data.slots);
       } catch (err) {
         console.error("Failed to load slots:", err);
