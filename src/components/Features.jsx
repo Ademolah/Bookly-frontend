@@ -14,7 +14,7 @@ const features = [
   },
   {
     title: "Mobile-First Design",
-    description: "Fully responsive design — built for mobile, ready for desktop.",
+    description: "Fully responsive design built for mobile, ready for desktop.",
     icon: "📱",
   },
   {
