@@ -41,7 +41,7 @@ const Login = () => {
             <strong>Bookly</strong> your simple, elegant scheduling companion.
           </p>
           <p className="text-xs md:text-sm text-[#97BEFF]">
-            Built by Binary — your future-ready tech partner.
+            Built by Binary your future-ready tech partner.
           </p>
         </div>
       </div>
