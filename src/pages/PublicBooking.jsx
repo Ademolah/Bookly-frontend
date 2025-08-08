@@ -38,7 +38,7 @@ const PublicBooking = () => {
     setLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:5000/api/bookings/public", {
+      const res = await axios.post("https://bookly-backend-5qfw.onrender.com/api/bookings/public", {
         slotId: form.selectedSlot,
         name: form.fullName,
         email: form.email,
