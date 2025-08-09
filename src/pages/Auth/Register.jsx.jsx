@@ -4,12 +4,13 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
-import { toast, ToastContainer } from "react-toastify";
+import { toast} from "react-toastify";
 
 const Register = () => {
   const [form, setForm] = useState({ fullName: "", email: "", password: "" });
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleChange = (e) =>
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -71,7 +72,7 @@ const Register = () => {
             className="w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-[#50D6FE]"
             required
           />
-          <input
+          {/* <input
             type="password"
             name="password"
             placeholder="Password"
@@ -79,7 +80,24 @@ const Register = () => {
             onChange={handleChange}
             className="w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-[#50D6FE]"
             required
-          />
+          /> */}
+          <div className="relative w-full">
+            <input
+              type={showPassword ? "text" : "password"}
+              name="password"
+              placeholder="Password"
+              onChange={handleChange}
+              className="w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-[#50D6FE]"
+              required
+            />
+            <button
+              type="button"
+              onClick={() => setShowPassword((prev) => !prev)}
+              className="absolute inset-y-0 right-3 flex items-center text-sm text-gray-500 hover:text-[#00477B] focus:outline-none"
+            >
+              {showPassword ? "Hide" : "Show"}
+            </button>
+          </div>
 
           <button
             type="submit"
