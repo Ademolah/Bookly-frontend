@@ -56,7 +56,7 @@ const Settings = () => {
     setLoading(false);
   };
 
-  const bookingUrl = `https://bookly-frontend-fawn.vercel.app/book/${form.slug}`;
+  const bookingUrl = `https://www.booklyio.com/book/${form.slug}`;
 
   const handleCopy = () => {
     navigator.clipboard.writeText(bookingUrl);
