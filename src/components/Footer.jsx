@@ -50,7 +50,7 @@ const Footer = () => {
             href="mailto:hello@binary.africa"
             className="text-[#50D6FE] hover:underline mt-1 inline-block"
           >
-            hi@hqbinary.com
+            hi@booklyio.com
           </a>
         </div>
       </div>
