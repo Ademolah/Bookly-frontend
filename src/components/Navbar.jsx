@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
 import { Link } from 'react-router-dom';
-import logo from '../assets/images/bookly.svg'
+import logo from '../assets/images/bookly2.svg'
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
