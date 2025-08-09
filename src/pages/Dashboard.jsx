@@ -4,14 +4,50 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import DashboardLayout from "../components/DasboardLayout";
+import axios from "axios";
 
 const Dashboard = () => {
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
+  const token = localStorage.getItem("token");
+  const [stats, setStats] = useState({
+      slotsAvailable: 0,
+      upcomingBookings: 0,
+      newMessages: 0,
+    });
+
+  const fetchStats = async () => {
+    try {
+      const resSlots = await axios.get("https://bookly-backend-5qfw.onrender.com/api/slots", {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+
+      const availableSlots = resSlots.data.filter(slot => !slot.is_booked).length;
+
+      const resBookings = await axios.get("https://bookly-backend-5qfw.onrender.com/api/bookings", {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+
+      const upcomingBookings = resBookings.data.filter(b => new Date(b.slotId.date) > new Date()).length;
+
+      setStats({
+        slotsAvailable: availableSlots,
+        upcomingBookings,
+        newMessages: 0, // placeholder until we add messaging
+      });
+    } catch (err) {
+      console.error("Error fetching stats:", err);
+    }
+  };
+
+  useEffect(() => {
+    fetchStats();
+  }, []);
 
   useEffect(() => {
     const token = localStorage.getItem("token");
     const userInfo = localStorage.getItem("user");
+    
 
     if (!token || !userInfo) {
       navigate("/login");
@@ -49,7 +85,7 @@ const Dashboard = () => {
           </div>
 
           {/* Future: Quick Stats or Widgets */}
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white shadow-md rounded-xl p-6 border-l-4 border-[#00477B]">
               <h4 className="text-sm text-gray-500">Slots Available</h4>
               <p className="text-3xl font-semibold text-[#00477B]">12</p>
@@ -62,7 +98,21 @@ const Dashboard = () => {
               <h4 className="text-sm text-gray-500">New Messages</h4>
               <p className="text-3xl font-semibold text-[#00477B]">2</p>
             </div>
-          </div>
+          </div> */}
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="bg-white shadow-md rounded-xl p-6 border-l-4 border-[#00477B]">
+          <h4 className="text-sm text-gray-500">Slots Available</h4>
+          <p className="text-3xl font-semibold text-[#00477B]">{stats.slotsAvailable}</p>
+        </div>
+        <div className="bg-white shadow-md rounded-xl p-6 border-l-4 border-[#50D6FE]">
+          <h4 className="text-sm text-gray-500">Upcoming Bookings</h4>
+          <p className="text-3xl font-semibold text-[#00477B]">{stats.upcomingBookings}</p>
+        </div>
+        <div className="bg-white shadow-md rounded-xl p-6 border-l-4 border-[#97BEFF]">
+          <h4 className="text-sm text-gray-500">New Messages</h4>
+          <p className="text-3xl font-semibold text-[#00477B]">{stats.newMessages}</p>
+        </div>
+      </div>
         </div>
       </div>
     </DashboardLayout>
